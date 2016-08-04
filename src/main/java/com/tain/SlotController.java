@@ -1,6 +1,7 @@
 package com.tain;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -17,6 +18,7 @@ import static java.util.stream.Collectors.toList;
 
 @Controller
 @RequestMapping("slot")
+@CrossOrigin(origins = "http://localhost:9000")
 public class SlotController {
 
     private static String[] allSymbols = new String[]{"A", "B", "C"};
