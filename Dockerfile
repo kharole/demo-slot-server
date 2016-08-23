@@ -1,4 +1,2 @@
-FROM frolvlad/alpine-oraclejdk8:slim
-ADD target/demo-slot-server-0.0.1-SNAPSHOT.jar app.jar
-RUN sh -c 'touch /app.jar'
-ENTRYPOINT ["java","-jar","/app.jar"]
+FROM maven:3.3-jdk-8-onbuild
+CMD ["java","-jar","/usr/src/app/target/demo-slot-server-0.0.1-SNAPSHOT.jar"]
