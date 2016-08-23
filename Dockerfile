@@ -1,4 +1,4 @@
 FROM frolvlad/alpine-oraclejdk8:slim
-ADD demo-slot-server-0.0.1-SNAPSHOT.jar app.jar
+ADD target/demo-slot-server-0.0.1-SNAPSHOT.jar app.jar
 RUN sh -c 'touch /app.jar'
 ENTRYPOINT ["java","-jar","/app.jar"]
