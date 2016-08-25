@@ -18,7 +18,7 @@ import static java.util.stream.Collectors.toList;
 
 @Controller
 @RequestMapping("slot")
-@CrossOrigin(origins = "http://localhost:9000")
+@CrossOrigin(origins = "*")
 public class SlotController {
 
     private static String[] allSymbols = new String[]{"A", "B", "C"};
