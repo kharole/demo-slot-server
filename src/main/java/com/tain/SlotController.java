@@ -69,6 +69,13 @@ public class SlotController {
         return config;
     }
 
+    @RequestMapping(value = "/reset")
+    @ResponseBody
+    public State getReset() {
+        state = new State(balance, null, null, null, symbols, emptyList(), null);
+        return state;
+    }
+
     private LineResult calculateWin(Line line, Integer bet, String[][] symbols) {
         if (line.getCells().stream().map(c -> symbols[c.getRow()][c.getReel()]).distinct().count() == 1)
             return new LineResult(line.getId(), bet, bet * 3);
