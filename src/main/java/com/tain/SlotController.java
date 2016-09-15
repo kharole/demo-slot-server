@@ -72,6 +72,8 @@ public class SlotController {
     @RequestMapping(value = "/reset")
     @ResponseBody
     public State getReset() {
+        balance = new BigDecimal("1000.00");
+        symbols = randomSymbols();
         state = new State(balance, null, null, null, symbols, emptyList(), null);
         return state;
     }
